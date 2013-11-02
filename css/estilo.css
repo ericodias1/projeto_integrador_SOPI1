@@ -1,0 +1,35 @@
+#header{
+	height: 300px;
+	width: 100%;
+}
+
+.header{
+	background: white;
+}
+
+body{
+	background: #C0D9D9;
+}
+
+#accordion{
+	background: white;
+	border-radius: 10px;
+	margin: 2px;
+	padding: 3px;
+	margin-top: 10px;
+}
+
+#accordion a{
+	color: #5959AB;
+}
+
+#conteudo {
+	background: white;
+	margin-top: 10px;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.alerta{
+	margin: 2px;
+}
