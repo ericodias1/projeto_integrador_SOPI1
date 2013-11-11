@@ -1,8 +1,57 @@
     function buscaMenu(acao){
-        if(acao == 'teste')
-            $("#conteudo").load("pages/TESTE.html");
-        else if(acao == 'quiz')
-        	$("#conteudo").load("pages/quiz.html");
+    	switch (acao){
+    		case 'quiz':
+    			$("#conteudo").load("pages/quiz.html");
+    		break;
+    		case 'historia':
+    			$("#conteudo").load("pages/historia.html");
+    		break;
+    		case 'caracteristicas':
+    			$("#conteudo").load("pages/caracteristicas.html");
+    		break;
+    		case 'estruturaDoSistema':
+    			$("#conteudo").load("pages/estruturaSistema.html");
+    		break;
+    		case 'sistemaDeArquivos':
+    			$("#conteudo").load("pages/sistemaArquivos.html");
+    		break;
+    		case 'tiposSistemaArquivos':
+    			$("#conteudo").load("pages/tiposSistemaArquivos.html");
+    		break;
+    		case 'gerenciamentoDeMemoria':
+    			$("#conteudo").load("pages/gerenciamentoMemoria.html");
+    		break;
+    		case 'gerenciamentoDeProcessos':
+    			$("#conteudo").load("pages/gerenciamentoDeProcessos.html");
+    		break;
+    		case 'threads':
+    			$("#conteudo").load("pages/processosThreads.html");
+    		break;
+    		case 'html':
+    			$("#conteudo").load("pages/html.html");
+    		break;
+    		case 'css':
+    			$("#conteudo").load("pages/css.html");
+    		break;
+    		case 'javascript':
+    			$("#conteudo").load("pages/javascript.html");
+    		break;
+    		case 'pi1':
+    			$("#conteudo").load("pages/pi1.html");
+    		break;
+    		case 'soAndroid':
+    			$("#conteudo").load("pages/soAndroid.html");
+    		break;
+    		case 'introAndroid':
+    			$("#conteudo").load("pages/introAndroid.html");
+    		break;
+    		case 'conclusao':
+    			$("#conteudo").load("pages/conclusao.html");
+    		break;
+            case 'referencias':
+                $("#conteudo").load("pages/referencias.html");
+            break;
+    	}
     }	
 
   	var a='';

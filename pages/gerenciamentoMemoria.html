@@ -1,0 +1,27 @@
+<p>Por ser baseado em Linux, o Android utiliza um sistema de gerenciamento de memória
+baseado no mesmo. As operações de nível mais baixo (como por exemplo I/O) são
+gerenciadas pela camada mais baixa, o kernel, mais exatamente por uma biblioteca
+desenvolvida em C que acompanha o Linux há muito tempo. Porém a máquina virtual
+do Android pode gerenciar operações do nível mais baixo, substituindo bibliotecas que
+o Kernel utiliza, são exceções que o sistema permite.[Gomes and Fernandes and
+Ferreira, 2012]</p>
+<p>No Kernel do Android existem 2 sistemas de gerenciamento de memória: o
+gerenciador da memória física e o gerenciador da memória lógica. O da física cuida da
+alocação e liberação da memória, e o da lógica gerencia a memória virtual.</p>
+<p>− Gerenciador de memória física: Administra as páginas e aloca-as de modo que
+elas fiquem na memória preferencialmente contíguas. Ele usa um algorítmo que
+une regiões livres adjacentes da memória quando estão livres, e faz virar uma
+região só. Esse gerenciador utiliza na alocação de memória a função kmalloc,
+que equivale a função malloc do C, essa função aloca espaço na memória
+conforme o tamanho que o tipo de dado necessita. Ele também utiliza
+prioridades na alocação, porém quando o kmalloc é executado, ele nunca pode
+parar uma requisição, então se chegar um pedido com prioridade maior, esse
+pedido só será executado quando a requisição em andamento for concluída pelo
+kmalloc. Essas prioridades também podem definir quando vai ser utilizada a
+DMA(acesso direto a memória), mas a DMA não pode ser realizada em
+determinadas regiões da memória.</p>
+<p>− Gerenciador de memória lógica: Ele gerencia a memória virtual, controlando o
+índice de endereçamento de cada processo. O sistema aloca a memória virtual
+sob demanda e monitora a transferência de páginas entre a memória primária e a
+memória secundária. No índice de endereçamento consiste em mostrar e apontar
+onde está alocado cada parte do processo na memória virtual. [Girollete, 2012]</p>

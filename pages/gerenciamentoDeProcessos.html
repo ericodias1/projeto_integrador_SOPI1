@@ -1,0 +1,17 @@
+<p>A parte dos processos é totalmente gerenciad pelo Kernel do Android, ele é quem mata
+os processos e os põe na ativa também. O escalonamento é feito também pelo Kernel e
+utilizado com prioridades. Abaixo constam as camadas desse escalonamento:</p>
+<p>− Active processes: processos em interação com o usuário. Esses são mantidos a
+todo custo pelo processador.</p>
+<p>− Visible processes: processos visíveis pelo usuário, mais em segundo plano. Só
+são mortos pelo escalonamento em extrema necessidade.</p>
+<p>− Started service processos: Por não estarem visíveis ao usuário tem menos
+prioridade que os visible processes.</p>
+<p>− Background processes: Processos que não estão visíveis e não possuem
+nenhuma tarefa em andamento.</p>
+<p>− Empty processes: Os que já foram terminados mas são mantidos no processador
+enquanto há possibilidade para caso sejam iniciados de novo, tenha melhor
+performance.[Gomes and Fernandes and Ferreira, 2012]</p>
+<p>As primeiras camadas do escalonamento são as que tem mais prioridade. Na
+concorrência entre 2 processo com prioridades iguais, o critério de desempate é o
+processo que teve mais tempo com prioridade baixa é o que ganha o processador.</p>

@@ -1,0 +1,13 @@
+<p>A maioria dos aplicativos em Android rodam com apenas um processo. Porém
+se por algum motivo o programador precisar separar a aplicação em mais de um
+processo, é possível, porém a técnica mais utilizada é usar um processo apenas, e
+conforme o andamento do aplicativo (eventos do usuário ou decorrentes da execução do
+programa ou do sistema operacional) novos processos podem ser criados para esse
+mesmo aplicativo. Quando um aplicativo é executado, o Android cria apenas um
+processo, o próprio aplicativo é quem precisa ser capaz de criar outros processos
+conforme sua necessidade. Existem atributos de cada processo disponíveis para o
+programador saber o estado e alterar atributos(não todos) de cada processo ou thread.</p>
+<p>Cada aplicativo que tem mais de uma thread, tem uma em específico para
+gerenciar e fazer as chamadas de todas as outras(UI Thread). A UI Thread trabalha
+como um índice, ou seja, ela é responsável por referenciar e chamar todas as outras
+threads.[Girollete, 2012]</p>
