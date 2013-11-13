@@ -51,6 +51,18 @@
             case 'referencias':
                 $("#conteudo").load("pages/referencias.html");
             break;
+            case 'intEstudoCaso':
+                $("#conteudo").load("pages/intEstudoCaso.html");
+            break;
+            case 'htmlEstudoCaso':
+                $("#conteudo").load("pages/htmlEstudoCaso.html");
+            break;
+            case 'cssEstudoCaso':
+                $("#conteudo").load("pages/cssEstudoCaso.html");
+            break;
+            case 'javascriptEstudoCaso':
+                $("#conteudo").load("pages/javascriptEstudoCaso.html");
+            break;
     	}
     }	
 
@@ -59,6 +71,8 @@
 		var p = new Array();
 		var r = new Array();
 		var r_user = new Array();
+        var pontos=0;
+        var text_pontos;
 		p[1] = '1. Qual o membro mais famoso da OHA(Open Handset Alliance)?';
 		r[1] = 'C) Google';
 		p[2] = '2. O Android roda sobre qual Kernel?';
@@ -87,11 +101,15 @@
 	   		});
 		}
 		for(i=1;i<=10;i++)
-			if(r_user[i]==r[i])
+			if(r_user[i]==r[i]){
 				a+='<br>' + p[i] + '<br><br><span class="alerta alert alert-success">' + r[i] + '</span><br>';
+                pontos++;
+            }
 			else
 				a+='<br>' + p[i] + '<br><br><span class="alerta alert alert-success">' + r[i] + '</span><br><br><span class="alerta alert alert-danger">' + r_user[i] + '</span><br>';
-
-		$("#conteudo").append(a);
+        var user = $('[name=nome]').val();
+        text_pontos = user + ', você fez ' + pontos + ' pontos.<br>';
+        a = text_pontos + a;
+		$("#conteudo").html(a);
 		event.preventDefault();
 	}
