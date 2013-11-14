@@ -1,9 +1,11 @@
 #header{
-	width: 100%;
+	width: 50%;
+	float: left;
 }
 
-.header{
-	background: white;
+#header2{
+	width: 48%;
+	float: right;
 }
 
 body{
