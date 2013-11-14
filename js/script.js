@@ -64,6 +64,7 @@
                 $("#conteudo").load("pages/javascriptEstudoCaso.html");
             break;
     	}
+    	event.preventDefault();
     }	
 
   	var a='';
